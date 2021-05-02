@@ -1,12 +1,15 @@
 # syntax=docker/dockerfile:1
+FROM nvidia/cuda:10.2-base
+CMD nvidia-smi
 
-FROM python:3.8-slim-buster
+RUN apt-get update && apt-get install --no-install-recommends --no-install-suggests -y curl
+RUN apt-get install unzip
+RUN apt-get -y install python3=3.8
+RUN apt-get -y install python3-pip
 
-WORKDIR /app
-
-RUN apt-get install nvidia-container-runtime
-RUN docker run -it --rm --gpus all ubuntu nvidia-smi
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
+
+WORKDIR /app
 
 COPY . .
