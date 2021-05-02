@@ -8,7 +8,9 @@ RUN apt-get -y install python3
 RUN apt-get -y install python3-pip
 RUN pip3 install --upgrade pip
 
+WORKDIR /app
+
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
-WORKDIR /app
+COPY . .
