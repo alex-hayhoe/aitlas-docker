@@ -4,7 +4,7 @@ CMD nvidia-smi
 
 RUN apt-get update && apt-get install --no-install-recommends --no-install-suggests -y curl
 RUN apt-get install unzip
-RUN apt-get -y install python3=3.8.8
+RUN apt-get -y install python3
 RUN apt-get -y install python3-pip
 
 COPY requirements.txt requirements.txt
