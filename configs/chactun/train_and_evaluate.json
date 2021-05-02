@@ -10,16 +10,16 @@
     "task": {
         "classname": "aitlas.tasks.TrainAndEvaluateTask",
           "config": {
-              "epochs": 50,
-              "model_directory": "examples/experiments/",
-              "save_epochs": 10,
+              "epochs": 10,
+              "model_directory": "examples/",
+              "save_epochs": 5,
               "id": "chactun",
               "train_dataset_config":{
                   "classname": "aitlas.datasets.ChactunDataset",
                   "config": {
                       "batch_size": 4,
                       "shuffle": true,
-                      "num_workers": 4,
+                      "num_workers": 1,
                       "root": "/mnt/1/train",
                       "transforms": ["aitlas.transforms.MinMaxNormTransponse"],
                       "target_transforms": ["aitlas.transforms.MinMaxNorm"]
