@@ -7,10 +7,6 @@ class TrainTask(BaseTask):
 
     def __init__(self, model: BaseModel, config):
         super().__init__(model, config)
-        
-    def run(self):
-        """Do something awesome here"""
-        device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
     def run(self):
         """Do something awesome here"""
