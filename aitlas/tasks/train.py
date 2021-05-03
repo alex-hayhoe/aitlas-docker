@@ -38,6 +38,7 @@ class TrainAndEvaluateTask(BaseTask):
 
     def run(self):
         """Do something awesome here"""
+        device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         train_dataset = self.create_dataset(self.config.train_dataset_config)
         val_dataset = self.create_dataset(self.config.val_dataset_config)
 
