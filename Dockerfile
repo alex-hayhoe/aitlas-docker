@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM nvidia/cuda:10.2-base
+FROM nvidia/cuda:11.3.0-base-ubuntu18.04
 CMD nvidia-smi
 
 RUN apt-get update && apt-get install --no-install-recommends --no-install-suggests -y curl
