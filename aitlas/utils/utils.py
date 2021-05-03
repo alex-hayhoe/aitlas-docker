@@ -3,6 +3,7 @@ import os
 from time import time
 
 import numpy as np
+import cupy as cp
 import tifffile
 from PIL import Image, ImageOps
 
