@@ -1,0 +1,12 @@
+sudo docker build -t alexhayhoe/aitlas-local .
+
+sudo docker run -it --name aitlas1;
+-v /home/ahayhoe/Documents/DiscoverMayaChallenge_data/lidar_train:/mnt/1/train;
+-v /home/ahayhoe/Documents/DiscoverMayaChallenge_data/lidar_test:/mnt/1/test;
+-v /home/ahayhoe/Documents/DiscoverMayaChallenge_data/lidar_predict:/mnt/1/predict;
+--shm-size=15000M --gpus all;
+alexhayhoe/aitlas-local /bin/bash
+
+python3 -m aitlas.run configs/chactun/train_and_evaluate.json
+
+python3 -m aitlas.run configs/chactun/predict_images.json

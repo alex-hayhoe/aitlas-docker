@@ -1,7 +1,4 @@
-torch<1.6.1
-torchvision<0.7.1
 munch<2.5.1
-cupy<9.0.0b3
 numpy<1.19.2
 marshmallow<3.7.2
 matplotlib<3.3.1

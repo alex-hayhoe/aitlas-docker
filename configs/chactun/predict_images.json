@@ -10,9 +10,9 @@
     "task": {
         "classname": "aitlas.tasks.PredictSegmentationTask",
         "config": {
-            "model_path": "/media/ssd/chactun_new/experiments/checkpoint.pth.tar",
-            "dir": "/media/ssd/chactun_new/predict",
-            "output_path": "/media/ssd/chactun_new/predict",
+            "model_path": "examples/checkpoint.pth.tar",
+            "dir": "/mnt/1/test/",
+            "output_path": "/mnt/1/predict/",
             "transforms": ["aitlas.transforms.MinMaxNormTransponse"],
             "labels": ["Aguada", "Building", "Platform"],
             "output_format": "image"

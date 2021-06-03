@@ -10,13 +10,13 @@
     "task": {
         "classname": "aitlas.tasks.PredictSegmentationTask",
         "config": {
-            "model_path": "/media/ssd/chactun_new/experiments/checkpoint.pth.tar",
-            "dir": "/media/ssd/chactun_new/predict",
-            "output_path": "/media/ssd/chactun_new/predict",
+            "model_path": "examples/checkpoint.pth.tar",
+            "dir": "/mnt/1/train",
+            "output_path": "/mnt/1/predict",
             "dataset_config":{
                 "classname": "aitlas.datasets.ChactunDataset",
                 "config": {
-                  "root": "/media/ssd/Chactun/train",
+                  "root": "/mnt/1",
                   "transforms": ["aitlas.transforms.MinMaxNormTransponse"],
                   "target_transforms": ["aitlas.transforms.MinMaxNorm"]
                 }
