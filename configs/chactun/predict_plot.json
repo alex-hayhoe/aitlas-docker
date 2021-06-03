@@ -11,7 +11,7 @@
         "classname": "aitlas.tasks.PredictSegmentationTask",
         "config": {
             "model_path": "examples/checkpoint.pth.tar",
-            "dir": "/mnt/1/train",
+            "dir": "/mnt/1/predict",
             "output_path": "/mnt/1/predict",
             "dataset_config":{
                 "classname": "aitlas.datasets.ChactunDataset",
